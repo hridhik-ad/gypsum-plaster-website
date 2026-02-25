@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">Royal White Homes</h3>
+            <h3 className="text-white text-xl font-bold mb-4">DK Gypsum</h3>
             <p className="text-gray-400 mb-4">
-              Premium gypsum plaster supplier for residential and commercial projects. 
+              Premium plaster supplier for residential and commercial projects. 
               Quality you can trust.
             </p>
             <div className="flex gap-4">
@@ -106,7 +106,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} Royal White Homes. All rights reserved.
+              © {currentYear} DK Gypsum. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">

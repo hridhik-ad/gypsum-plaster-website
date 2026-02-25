@@ -46,10 +46,10 @@ const Benefits = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose Our Gypsum Plaster?
+            Why Choose DK Gypsum?
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Engineered for excellence, our premium gypsum plaster delivers unmatched 
+            Engineered for excellence, DK Gypsum delivers unmatched 
             quality and performance for every project.
           </p>
         </div>

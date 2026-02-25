@@ -8,7 +8,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Premium Gypsum Plaster for{' '}
+              DK Gypsum for{' '}
               <span className="text-blue-600">Perfect Finishes</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
@@ -58,7 +58,7 @@ const Hero = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                     </svg>
                   </div>
-                  <p className="text-blue-800 font-semibold text-lg">Premium Gypsum Plaster</p>
+                  <p className="text-blue-800 font-semibold text-lg">DK Gypsum</p>
                   <p className="text-blue-600 text-sm mt-2">25kg / 40kg Bags Available</p>
                 </div>
               </div>
