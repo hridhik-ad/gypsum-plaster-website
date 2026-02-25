@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#2c5f8d" rx="2"/>
+  
+  <!-- House roofs in background -->
+  <path d="M 10 10 L 13 7 L 16 10 Z" fill="#1e4266"/>
+  <path d="M 14 11 L 17 8 L 20 11 Z" fill="#1e4266"/>
+  
+  <!-- Paint roller handle -->
+  <rect x="3" y="14" width="6" height="2" fill="#2c5f8d" stroke="#1a4055" stroke-width="0.5"/>
+  <rect x="8" y="13" width="3" height="4" fill="#4a7ba7" stroke="#1a4055" stroke-width="0.5" rx="0.5"/>
+  
+  <!-- DK text -->
+  <text x="16" y="22" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">DK</text>
+</svg>

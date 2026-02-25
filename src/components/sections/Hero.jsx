@@ -47,20 +47,16 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Image Placeholder */}
+          {/* Product Image */}
           <div className="flex-1 w-full">
             <div className="relative">
-              <div className="aspect-square max-w-lg mx-auto bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
-                {/* Placeholder for product image */}
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-lg">
-                    <svg className="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
-                  </div>
-                  <p className="text-blue-800 font-semibold text-lg">DK Gypsum</p>
-                  <p className="text-blue-600 text-sm mt-2">25kg / 40kg Bags Available</p>
-                </div>
+              <div className="aspect-square max-w-lg mx-auto bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden p-8">
+                {/* DK Gypsum Bag Image */}
+                <img 
+                  src="/gypsum_bag.png" 
+                  alt="DK Gypsum Plaster 25kg Bag - High Density Moisture Resistant" 
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                />
               </div>
               
               {/* Floating Badge */}
