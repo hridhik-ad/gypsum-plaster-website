@@ -45,7 +45,7 @@ const Contact = () => {
                     </div>
                     <div className="flex flex-col justify-center space-y-4 sm:space-y-6 max-w-md lg:ml-auto">
                         <a
-                            href="https://wa.me/8943763765?text=I'm%20interested%20in%20DK%20HDMR%20Gypsum.%20Please%20share%20a%20quote."
+                            href="https://wa.me/918943763765?text=I'm%20interested%20in%20DK%20HDMR%20Gypsum.%20Please%20share%20a%20quote."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-full px-8 py-5 text-base font-bold text-white transition-all duration-200 bg-[#25D366] rounded-xl hover:bg-[#1da851] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-[#25D366] shadow-lg transform hover:-translate-y-1"
