@@ -22,7 +22,7 @@ const Contact = () => {
                                     <Phone className="h-5 w-5 text-indigo-400" />
                                 </div>
                                 <div className="ml-4 text-base text-gray-300">
-                                    +91 98765 43210
+                                    +91 8943763765
                                 </div>
                             </div>
                             <div className="flex items-center">
@@ -30,7 +30,7 @@ const Contact = () => {
                                     <Mail className="h-5 w-5 text-indigo-400" />
                                 </div>
                                 <div className="ml-4 text-base text-gray-300">
-                                    sales@dkgypsum.com
+                                    info@royalwhitehomes.com
                                 </div>
                             </div>
                             <div className="flex items-center">
@@ -38,14 +38,14 @@ const Contact = () => {
                                     <MapPin className="h-5 w-5 text-indigo-400" />
                                 </div>
                                 <div className="ml-4 text-base text-gray-300">
-                                    Kochi, Kerala, India
+                                    Chalakudy, Kerala, India
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-col justify-center space-y-4 sm:space-y-6 max-w-md lg:ml-auto">
                         <a
-                            href="https://wa.me/919876543210?text=I'm%20interested%20in%20DK%20HDMR%20Gypsum.%20Please%20share%20a%20quote."
+                            href="https://wa.me/8943763765?text=I'm%20interested%20in%20DK%20HDMR%20Gypsum.%20Please%20share%20a%20quote."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center w-full px-8 py-5 text-base font-bold text-white transition-all duration-200 bg-[#25D366] rounded-xl hover:bg-[#1da851] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-[#25D366] shadow-lg transform hover:-translate-y-1"
@@ -54,7 +54,7 @@ const Contact = () => {
                             WhatsApp for Quote
                         </a>
                         <a
-                            href="mailto:sales@dkgypsum.com?subject=Quotation Request for DK HDMR Gypsum"
+                            href="mailto:info@royalwhitehomes.com?subject=Quotation Request for DK HDMR Gypsum"
                             className="flex items-center justify-center w-full px-8 py-5 text-base font-bold text-white transition-all duration-200 bg-gray-800 border border-gray-700 rounded-xl hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gray-600 shadow-md transform hover:-translate-y-1"
                         >
                             <Mail className="w-5 h-5 mr-3 text-gray-400" />
