@@ -1,15 +1,18 @@
-import Hero from './components/sections/Hero'
-import Benefits from './components/sections/Benefits'
-import Footer from './components/layout/Footer'
+import React from 'react';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import Gallery from './components/Gallery';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="font-sans antialiased text-gray-900 bg-white min-h-screen">
       <Hero />
-      <Benefits />
-      <Footer />
+      <Features />
+      <Gallery />
+      <Contact />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
