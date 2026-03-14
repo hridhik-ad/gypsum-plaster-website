@@ -1,13 +1,384 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>royalwhitehomes</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal White Homes</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="assets/logo_reimagined.svg" alt="Royal White Homes logo">
+      <span class="brand-name">ROYAL WHITE HOMES</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#compare">Compare</a></li>
+      <li><a href="#ourstory">Our Story</a></li>
+      <li><a href="#proof">Projects</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Get a Quote ↗</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-texture"></div>
+    <div class="hero-grid parallax-layer" data-speed="0.3"></div>
+
+    <div class="float-el float-1 parallax-layer" data-speed="0.2"></div>
+    <div class="float-el float-2 parallax-layer" data-speed="0.15"></div>
+
+    <div class="wall-visual parallax-layer" data-speed="0.1">
+      <div class="wall-pattern">
+        <div class="smooth-chip">
+          <div class="chip-label">Surface Finish</div>
+          <div class="chip-value">Ultra-Smooth</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position: relative; z-index: 2; max-width: 700px;">
+      <div class="hero-tag">
+        <div class="tag-dot"></div>
+        HDMR Technology · Premium Gypsum Plaster
+      </div>
+      <h1 class="hero-title">
+        Walls That<br><em>Breathe</em><br>Perfection
+      </h1>
+      <p class="hero-sub">
+        Royal White Homes HDMR Plaster delivers ultra-smooth, naturally cool interiors with advanced moisture resistance
+        — at a fraction of cement + putty costs.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">
+          Get Free Estimate
+          <span class="arrow">↗</span>
+        </button>
+        <a href="#features" class="btn-outline">
+          See Features →
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-cards">
+      <div class="hero-stat-card">
+        <div class="stat-num">5000+</div>
+        <div class="stat-label">Interior Projects Completed</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-num">HDMR</div>
+        <div class="stat-label">High Density Moisture Resistant</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="marquee">
+      <span class="marquee-item"><span class="marquee-dot"></span> Ultra-Smooth Finish</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Natural Cooling Effect</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Moisture Resistant</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Cost Effective</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Fast Application</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Long Lasting</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> HDMR Technology</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> 5000+ Projects</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Ultra-Smooth Finish</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Natural Cooling Effect</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Moisture Resistant</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Cost Effective</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Fast Application</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> Long Lasting</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> HDMR Technology</span>
+      <span class="marquee-item"><span class="marquee-dot"></span> 5000+ Projects</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="section-label">Why Choose Royal White Homes</div>
+    <h2 class="section-title">Built for Interiors That Last</h2>
+
+    <div class="features-grid">
+      <div class="feature-card" data-delay="0">
+        <div class="feature-icon">❄️</div>
+        <div class="feature-title">Natural Cooling Effect</div>
+        <div class="feature-desc">Royal White Homes' unique mineral composition absorbs and regulates heat, keeping
+          interiors naturally cooler — reducing reliance on air conditioning.</div>
+      </div>
+      <div class="feature-card" data-delay="100">
+        <div class="feature-icon">✨</div>
+        <div class="feature-title">Ultra-Smooth Finish</div>
+        <div class="feature-desc">Achieves a mirror-like wall surface in fewer coats. No additional putty needed — ready
+          for direct painting, saving time and cost.</div>
+      </div>
+      <div class="feature-card" data-delay="200">
+        <div class="feature-icon">💧</div>
+        <div class="feature-title">HDMR Technology</div>
+        <div class="feature-desc">High Density Moisture Resistant formula prevents dampness, mold growth, and paint
+          peeling — engineered for Kerala's humid climate.</div>
+      </div>
+      <div class="feature-card" data-delay="300">
+        <div class="feature-icon">💰</div>
+        <div class="feature-title">Cost-Effective Solution</div>
+        <div class="feature-desc">Replaces the expensive cement + putty combination in one step. Lower material cost,
+          less labour time, better results.</div>
+      </div>
+      <div class="feature-card" data-delay="400">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title">Fast &amp; Easy Application</div>
+        <div class="feature-desc">Sets quickly with excellent workability. Professional or semi-skilled applicators can
+          cover large areas in minimal time.</div>
+      </div>
+      <div class="feature-card" data-delay="500">
+        <div class="feature-icon">🏗️</div>
+        <div class="feature-title">Durable &amp; Long-Lasting</div>
+        <div class="feature-desc">Bonds deeply to all interior walls and ceilings. Crack-resistant finish maintains its
+          smooth appearance for years without rework.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="section-label">Application Process</div>
+    <h2 class="section-title">Perfect Walls in 4 Simple Steps</h2>
+
+    <div class="steps-row">
+      <div class="step" data-delay="0">
+        <div class="step-num">01</div>
+        <div class="step-title">Surface Prep</div>
+        <div class="step-desc">Clean and dampen the wall. Remove loose paint or dust for optimal adhesion.</div>
+      </div>
+      <div class="step" data-delay="150">
+        <div class="step-num">02</div>
+        <div class="step-title">Mix Plaster</div>
+        <div class="step-desc">Add Royal White Homes HDMR powder to clean water. Mix to a smooth, lump-free consistency.
+        </div>
+      </div>
+      <div class="step" data-delay="300">
+        <div class="step-num">03</div>
+        <div class="step-title">Apply &amp; Level</div>
+        <div class="step-desc">Apply with a steel trowel in 2 coats. Level and compress for a seamless finish.</div>
+      </div>
+      <div class="step" data-delay="450">
+        <div class="step-num">04</div>
+        <div class="step-title">Final Polish</div>
+        <div class="step-desc">Once dried, lightly sand and proceed directly to painting. No putty required.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="compare-section" id="compare">
+    <div class="section-label">The Smarter Choice</div>
+    <h2 class="section-title" style="text-align:center;">Royal White Homes vs Traditional Methods</h2>
+
+    <div class="compare-grid">
+      <div class="compare-card old" data-delay="0">
+        <span class="compare-badge">Traditional Method</span>
+        <div class="compare-heading">Cement + Putty</div>
+        <div class="compare-item"><span class="icon">✗</span><span>Multiple coats of cement, bonding agent, putty — slow
+            &amp; expensive</span></div>
+        <div class="compare-item"><span class="icon">✗</span><span>Retains heat — makes interiors warmer and
+            uncomfortable</span></div>
+        <div class="compare-item"><span class="icon">✗</span><span>Absorbs moisture, leads to stains and paint
+            peeling</span></div>
+        <div class="compare-item"><span class="icon">✗</span><span>Rough finish — requires extra putty coat and
+            sanding</span></div>
+        <div class="compare-item"><span class="icon">✗</span><span>Drying time slows down construction schedule</span>
+        </div>
+      </div>
+      <div class="compare-card new" data-delay="150">
+        <span class="compare-badge">Royal White Homes HDMR</span>
+        <div class="compare-heading">Single-Step Solution</div>
+        <div class="compare-item"><span class="icon">✓</span><span>One product replaces cement + putty — saves 30–40% in
+            cost</span></div>
+        <div class="compare-item"><span class="icon">✓</span><span>Natural cooling effect keeps rooms comfortable and
+            energy efficient</span></div>
+        <div class="compare-item"><span class="icon">✓</span><span>HDMR technology — moisture proof, mold resistant,
+            long lasting</span></div>
+        <div class="compare-item"><span class="icon">✓</span><span>Ultra-smooth finish ready for direct painting — no
+            putty needed</span></div>
+        <div class="compare-item"><span class="icon">✓</span><span>Fast set time — complete projects up to 2x
+            faster</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="story-section" id="ourstory">
+
+    <!-- Company History -->
+    <div class="story-intro">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">15 Years of Building Excellence</h2>
+      <p class="story-text">
+        For over <strong>15 years</strong>, Royal White Homes has been at the forefront of interior plastering
+        innovation in India. What started as a small, passionate team has grown into one of the most trusted names in
+        the industry — delivering <strong>5,000+ successful projects</strong> across residential complexes, commercial
+        buildings, luxury villas, and government structures. Our commitment to quality materials, skilled craftsmanship,
+        and client satisfaction has made us the preferred choice for builders, architects, and homeowners alike.
+      </p>
+      <div class="story-highlights">
+        <div class="story-highlight-item" data-delay="0">
+          <div class="story-highlight-num">15+</div>
+          <div class="story-highlight-label">Years in Industry</div>
+        </div>
+        <div class="story-highlight-item" data-delay="100">
+          <div class="story-highlight-num">5000+</div>
+          <div class="story-highlight-label">Projects Delivered</div>
+        </div>
+        <div class="story-highlight-item" data-delay="200">
+          <div class="story-highlight-num">100+</div>
+          <div class="story-highlight-label">Skilled Professionals</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Managing Partners -->
+    <div class="partners-block">
+      <div class="section-label">Leadership</div>
+      <h2 class="section-title">Meet the Managing Partners</h2>
+      <p class="story-text">
+        Behind every great project is a vision backed by experience. Our managing partners bring decades of combined
+        expertise in construction, operations, and business strategy — ensuring Royal White Homes delivers at scale with
+        uncompromising quality.
+      </p>
+
+      <div class="partners-grid">
+        <div class="partner-card" data-delay="0">
+          <div class="partner-img-wrap">
+            <img src="assets/founder_1.jpeg" alt="Deepak A K — Managing Partner">
+          </div>
+          <div class="partner-info">
+            <div class="partner-name">Deepak A K</div>
+            <div class="partner-role">Managing Partner</div>
+            <div class="partner-desc">
+              A visionary leader with deep expertise in construction materials and interior technology, Deepak drives
+              Royal White Homes' innovation in HDMR plaster solutions and strategic business growth.
+            </div>
+          </div>
+        </div>
+        <div class="partner-card" data-delay="150">
+          <div class="partner-img-wrap">
+            <img src="assets/founder_2.jpeg" alt="Tommy Varghese — Managing Partner">
+          </div>
+          <div class="partner-info">
+            <div class="partner-name">Tommy Varghese</div>
+            <div class="partner-role">Managing Partner</div>
+            <div class="partner-desc">
+              With extensive experience in large-scale project execution and operations management, Tommy ensures every
+              Royal White Homes project meets the highest standards of quality and client satisfaction.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Worker Experience -->
+    <div class="workers-block">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">Experience That Shows in Every Wall</h2>
+      <p class="story-text">
+        Our skilled workforce is the backbone of Royal White Homes. Each project is handled by trained professionals who
+        bring years of hands-on plastering experience to the job.
+      </p>
+
+      <div class="workers-grid">
+        <div class="worker-card" data-delay="0">
+          <div class="worker-icon">🏆</div>
+          <div class="worker-years">12+ Years</div>
+          <div class="worker-role">Senior Plastering Specialists</div>
+          <div class="worker-desc">Our lead applicators have over a decade of experience in gypsum and HDMR plaster,
+            specializing in large-scale commercial and luxury residential projects.</div>
+        </div>
+        <div class="worker-card" data-delay="100">
+          <div class="worker-icon">⭐</div>
+          <div class="worker-years">8+ Years</div>
+          <div class="worker-role">Surface Preparation Experts</div>
+          <div class="worker-desc">Dedicated surface prep crew with deep knowledge of wall conditioning, priming, and
+            bonding — ensuring perfect adhesion and a flawless base for every project.</div>
+        </div>
+        <div class="worker-card" data-delay="200">
+          <div class="worker-icon">🎯</div>
+          <div class="worker-years">6+ Years</div>
+          <div class="worker-role">Finishing &amp; Quality Inspectors</div>
+          <div class="worker-desc">Our QC team inspects every wall for smoothness, levelness, and moisture readiness —
+            guaranteeing paint-ready surfaces that stand the test of time.</div>
+        </div>
+        <div class="worker-card" data-delay="300">
+          <div class="worker-icon">🔧</div>
+          <div class="worker-years">5+ Years</div>
+          <div class="worker-role">On-Site Project Supervisors</div>
+          <div class="worker-desc">Experienced supervisors coordinate daily operations, manage material logistics, and
+            ensure timelines are met without compromising on finish quality.</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof-section" id="proof">
+    <div class="section-label">Track Record</div>
+    <h2 class="section-title">Numbers That Speak</h2>
+
+    <div class="stats-row">
+      <div class="stat-block" data-delay="0">
+        <div class="stat-big">5000+</div>
+        <div class="stat-label" style="font-size:0.875rem;color:var(--muted);margin-top:0.5rem;">Completed Commercial
+          and Residential</div>
+      </div>
+      <div class="stat-block" data-delay="100">
+        <div class="stat-big">HDMR</div>
+        <div class="stat-label" style="font-size:0.875rem;color:var(--muted);margin-top:0.5rem;">Certified Technology
+        </div>
+      </div>
+      <div class="stat-block" data-delay="200">
+        <div class="stat-big">2×</div>
+        <div class="stat-label" style="font-size:0.875rem;color:var(--muted);margin-top:0.5rem;">Faster Application
+        </div>
+      </div>
+      <div class="stat-block" data-delay="300">
+        <div class="stat-big">30%</div>
+        <div class="stat-label" style="font-size:0.875rem;color:var(--muted);margin-top:0.5rem;">Cost Savings</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <h2 class="cta-title" id="ctaTitle">
+      Start Your Perfect Interior Today
+    </h2>
+    <p class="cta-sub">Talk to our team for a free estimate on your project.</p>
+    <button class="cta-btn" id="ctaBtn">
+      Request Free Estimate ↗
+    </button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Royal White Homes</div>
+    <div class="footer-copy">© 2025 Royal White Homes. HDMR Plaster for Premium Interiors.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
