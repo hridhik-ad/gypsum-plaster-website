@@ -88,3 +88,52 @@ document.querySelectorAll('.hero-stat-card').forEach(card => {
         setTimeout(() => card.style.transition = '', 500);
     });
 });
+
+// ── FACEBOOK VIDEO MUTUAL PAUSE (overlay technique) ──────────────────────────
+// Clicks inside a cross-origin iframe are invisible to parent-page JS.
+// Solution: place a transparent overlay div on top of each iframe.
+// • The overlay intercepts the first click (JS CAN see this).
+// • It pauses siblings, then removes itself so the native FB play button works.
+// • Switching to another video re-adds the overlay to the previously-active one.
+(function () {
+    const wrappers = Array.from(document.querySelectorAll('.fb-video-wrapper'));
+
+    // Reset an iframe src to stop playback
+    function stopVideo(wrapper) {
+        const iframe = wrapper.querySelector('iframe');
+        if (!iframe) return;
+        const src = iframe.src;
+        iframe.src = '';
+        setTimeout(() => { iframe.src = src; }, 200);
+    }
+
+    // Show the overlay (re-arms the intercept for that panel)
+    function showOverlay(wrapper) {
+        const ov = wrapper.querySelector('.fb-play-overlay');
+        if (ov) ov.style.display = 'block';
+    }
+
+    // Hide the overlay (exposes the native Facebook player)
+    function hideOverlay(wrapper) {
+        const ov = wrapper.querySelector('.fb-play-overlay');
+        if (ov) ov.style.display = 'none';
+    }
+
+    wrappers.forEach(wrapper => {
+        // Inject the invisible overlay once
+        const overlay = document.createElement('div');
+        overlay.className = 'fb-play-overlay';
+        wrapper.appendChild(overlay);
+
+        overlay.addEventListener('click', () => {
+            // Pause + re-arm every OTHER video
+            wrappers.forEach(w => {
+                if (w === wrapper) return;
+                stopVideo(w);
+                showOverlay(w);
+            });
+            // Expose the native player for the chosen video
+            hideOverlay(wrapper);
+        });
+    });
+})();

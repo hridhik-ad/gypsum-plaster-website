@@ -299,9 +299,9 @@ nav {
 .hero-cards {
     position: absolute;
     right: 3rem;
-    bottom: 8rem;
+    bottom: 3.5rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     opacity: 0;
     animation: fadeLeft 0.8s 1.2s forwards;
@@ -809,6 +809,84 @@ nav {
     color: var(--cream);
 }
 
+/* FACEBOOK VIDEO BLOCK */
+.fb-video-block {
+    margin-top: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fb-video-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Video gallery row */
+.fb-video-gallery {
+    display: flex;
+    align-items: flex-end;   /* bottom-align so mixed heights look intentional */
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;         /* wraps to a column on small screens */
+}
+
+/* Shared wrapper styles */
+.fb-video-wrapper {
+    position: relative;  /* needed to anchor the overlay */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 24px 72px rgba(200, 150, 60, 0.18);
+    border: 1px solid rgba(200, 150, 60, 0.2);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+    flex-shrink: 0;
+}
+
+/* Transparent overlay — intercepts the first click so JS can detect it,
+   then hides itself to expose the native Facebook play button. */
+.fb-play-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* 9:16 portrait panels */
+.fb-video-wrapper.fb-portrait {
+    width: 220px;   /* ← portrait panel width  */
+    height: 391px;  /* ← portrait panel height (width × 1.778) */
+}
+
+/* 16:9 landscape panel */
+.fb-video-wrapper.fb-landscape {
+    width: 380px;   /* ← landscape panel width */
+    height: 214px;  /* ← landscape panel height (width × 0.5625) */
+}
+
+.fb-video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.fb-video-wrapper:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.14),
+        0 36px 90px rgba(200, 150, 60, 0.22);
+}
+
 /* CTA SECTION */
 .cta-section {
     padding: 8rem 3rem;
@@ -925,54 +1003,80 @@ footer {
     background: radial-gradient(circle, rgba(200, 150, 60, 0.08) 0%, transparent 70%);
 }
 
-/* Wall texture visual */
-.wall-visual {
+/* HERO PRODUCT IMAGE */
+.hero-product {
     position: absolute;
-    right: 0;
+    right: 17%;
+    /* ← increase to move LEFT (toward text), decrease to move RIGHT */
     top: 50%;
     transform: translateY(-50%);
-    width: 42%;
-    height: 80%;
-    background: linear-gradient(135deg, var(--sand) 0%, var(--plaster) 100%);
-    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+    width: 44%;
+    max-width: 600px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    animation: productFloat 6s ease-in-out infinite;
+    filter: drop-shadow(0 40px 80px rgba(200, 150, 60, 0.25)) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.12));
 }
 
-.wall-pattern {
-    width: 85%;
-    height: 85%;
-    background-image:
-        linear-gradient(rgba(200, 150, 60, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200, 150, 60, 0.06) 1px, transparent 1px);
-    background-size: 30px 30px;
-    position: relative;
+.hero-product-img {
+    width: 100%;
+    max-height: 72vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    animation: productReveal 1s 0.6s both cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes productReveal {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes productFloat {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-50%) translateY(-18px);
+    }
 }
 
 .smooth-chip {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 2rem;
+    left: auto;
+    right: 0;
     background: rgba(250, 248, 244, 0.95);
+    backdrop-filter: blur(12px);
     border-radius: 16px;
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     text-align: center;
-    border: 1px solid rgba(200, 150, 60, 0.2);
-    min-width: 200px;
-    animation: float 4s ease-in-out infinite;
+    border: 1px solid rgba(200, 150, 60, 0.25);
+    min-width: 160px;
+    box-shadow: 0 8px 32px rgba(200, 150, 60, 0.15);
+    animation: chipBounce 4s ease-in-out infinite;
 }
 
-@keyframes float {
+@keyframes chipBounce {
 
     0%,
     100% {
-        transform: translate(-50%, -50%) translateY(0)
+        transform: translateY(0);
     }
 
     50% {
-        transform: translate(-50%, -50%) translateY(-12px)
+        transform: translateY(-8px);
     }
 }
 
@@ -981,12 +1085,12 @@ footer {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 .chip-value {
     font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--gold);
 }
